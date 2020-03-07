@@ -1,14 +1,19 @@
+function loadProfiles(json) {
+    chrome.storage.sync.set({profiles: json}, function () {
+        chrome.storage.sync.get(['profiles'], function (result) {
+            for (let profile in result.profiles) {
+                chrome.storage.sync.set({profile: profile}, function () {
+
+                })
+                break;
+            }
+        })
+    })
+}
+
 chrome.runtime.onInstalled.addListener(function () {
-    chrome.storage.sync.set({color: '#3aa757'}, function () {
-        console.log('The color is green.');
-    });
-    chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
-        chrome.declarativeContent.onPageChanged.addRules([{
-            conditions: [new chrome.declarativeContent.PageStateMatcher({
-                pageUrl: {hostEquals: 'developer.chrome.com'},
-            })
-            ],
-            actions: [new chrome.declarativeContent.ShowPageAction()]
-        }]);
-    }); 
-});  
+    const url = chrome.runtime.getURL('profiles/profiles.json');
+    fetch(url)
+        .then((response) => response.json()) //assuming file contains json
+        .then((json) => loadProfiles(json));
+});
