@@ -2,7 +2,22 @@ replaceWords(document.body);
 
 function replaceWords(element) {
     const profiles = {
-        // faschist = moderater och nazister
+        happy: {
+          "corona": "superduper",
+          "Stefan": "Steffo",
+          "fall": "barnkalas",
+          "smittade": "botade",
+          "viruset": "partyt",
+          "vaccin": "hallonsaft",
+          "rånad": "kramad",
+          "misshandlad": "pussad",
+          "Vladimir Putin": "Lilla Putte",
+          "dog": "överlevde",
+          "skadade": "jätteglada",
+          "klimatsmart": "svinig",
+          "mörda": "laga god mat",
+          "sjuk": "frisk",
+        },
         fascist: {
           "Stefan Löfven": "Svetsarn",
           "Socialdemokraterna": "Såssarna",
@@ -11,14 +26,8 @@ function replaceWords(element) {
         communist: {
           "Ulf Kristersson": "Ulf Krister Pyssling",
           "corona": "Kapitalism",
+          "sverigedemokrater": "svejevänner"
         },
-        happy: {
-          "corona": "lycka",
-          Stefan: "Steffo",
-          coronafall: "barnkalas",
-          smittade: "botade",
-          viruset: "partyt",
-        }
     }
 
     let activeProfile = "happy"
