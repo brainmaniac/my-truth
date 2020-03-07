@@ -24,17 +24,17 @@ function replaceWords(element) {
     let activeProfile = "happy"
 
     chrome.storage.sync.get(['profile'], function(profile) {
-      activeProfile = profile;
+      console.log(profile.profile)
+      activeProfile = profile.profile;
+      let wordMap = profiles[activeProfile]
+  
+      let wordMapAsArray = Object.entries(wordMap)
+  
+      for (const [toBeReplaced, replacement] of wordMapAsArray) {
+          var regex = new RegExp(toBeReplaced, "gmi");
+          const str = element.innerHTML;
+          const result = str.replace(regex, replacement);
+          element.innerHTML = result
+      }
     });
-
-    let wordMap = profiles[activeProfile]
-
-    let wordMapAsArray = Object.entries(wordMap)
-
-    for (const [toBeReplaced, replacement] of wordMapAsArray) {
-        var regex = new RegExp(toBeReplaced, "gmi");
-        const str = element.innerHTML;
-        const result = str.replace(regex, replacement);
-        element.innerHTML = result
-    }
 }
