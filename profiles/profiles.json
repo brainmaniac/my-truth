@@ -4,6 +4,7 @@
     "Stefan": "Steffo",
     "fall": "barnkalas",
     "smittade": "botade",
+    "smittad": "botad",
     "viruset": "partyt",
     "vaccin": "hallonsaft",
     "rånad": "kramad",
@@ -12,8 +13,15 @@
     "dog": "överlevde",
     "skadade": "jätteglada",
     "klimatsmart": "svinig",
+    "mördad": "uppvaktad",
     "mörda": "laga god mat",
-    "sjuk": "frisk"
+    "sjukhus": "spa",
+    "sjukdomen": "glädjen",
+    "sjukdom": "glädje",
+    "sjuk": "frisk",
+    "fruktansvärda": "underbara",
+    "ambulans": "glassbil",
+    "läskigt": "kul"
   },
   "fascist": {
     "Stefan Löfven": "Svetsarn",
@@ -21,7 +29,6 @@
     "corona": "Marknadsekonomi"
   },
   "communist": {
-    "Stefan Löfven": "Krögarn",
     "Ulf Kristersson": "Ulf Krister Pyssling",
     "corona": "Kapitalism",
     "sverigedemokrater": "svejevänner"
