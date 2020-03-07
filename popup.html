@@ -7,10 +7,36 @@
             width: 30px;
             outline: none;
         }
+
+        #status {
+            margin-top: 5px;
+            width: 100%;
+            background: green;
+            color: white;
+            padding: 5px;
+            opacity: 0;
+            transition: all .2s ease-in-out;
+        }
+
+        #status.show {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
-<button id="changeColor"></button>
+<div class="header">
+    <span>Current profile: </span>
+    <span id="profile"></span>
+</div>
+<div>
+    <p>Choose a profile: </p>
+</div>
+<div id="buttonDiv">
+</div>
+
+<div id="status">
+
+</div>
 <script src="popup.js"></script>
 </body>
 </html>
