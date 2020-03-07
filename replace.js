@@ -8,7 +8,7 @@ var observer = new MutationObserver(function(mutations, observer) {
     coronafall: "barnkalas",
     vaccin: "bomb",
     smittade: "botade",
-    viruset: "party drogen",
+    viruset: "partyt",
   }
 
   let wordMapAsArray = Object.entries(wordMap)
