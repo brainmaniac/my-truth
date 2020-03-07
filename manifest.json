@@ -1,7 +1,7 @@
 {
-  "name": "Getting Started Example",
+  "name": "My truth",
   "version": "1.0",
-  "description": "Build an Extension!",
+  "description": "Get the news you always wanted to see :)",
   "permissions": [
     "activeTab",
     "declarativeContent",
