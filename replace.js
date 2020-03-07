@@ -26,14 +26,17 @@ function replaceWords(element) {
         vaccin: "bomb",
         smittade: "botade",
         viruset: "partyt",
-        SD: 'Vänsterpartiet',
         Sverigedemokraterna: 'Anders soldater',
-        "Vänsterpartiet": 'SD2'
+        vansterpartiet: 'SD2',
+        "vänsterpartiet": 'SD3'
     }
 
     let wordMapAsArray = Object.entries(wordMap)
 
     for (const [toBeReplaced, replacement] of wordMapAsArray) {
-        element.innerHTML = element.innerHTML.replace(toBeReplaced, '<span data-mytruth="true">' + replacement + '</span>');
+        var regex = new RegExp(toBeReplaced, "gmi");
+        const str = element.innerHTML;
+        const result = str.replace(regex, replacement);
+        element.innerHTML = result
     }
 }
