@@ -1,14 +1,4 @@
-const targetTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'span'];
-
-const config = {attributes: true, childList: true, subtree: true};
-
-for (let x = 0, len = targetTags.length; x < len; x++) {
-    const targetNodes = document.getElementsByTagName(targetTags[x]);
-    for (let i = 0, len = targetNodes.length; i < len; i++) {
-
-        replaceWords(targetNodes[i]);
-    }
-}
+replaceWords(document.body);
 
 function replaceWords(element) {
     const profiles = {
