@@ -11,7 +11,7 @@ function replaceWords(qqqqq, source, wordMapAsArray) {
             let el = elements[element]
             for (const [toBeReplaced, replacement] of wordMapAsArray) {
                 var regex = new RegExp(toBeReplaced + "(?![^<]*>)", "gmi");
-                if (el.innerHTML)
+                if (regex.test(el.innerHTML) && el.innerHTML)
                     el.innerHTML = el.innerHTML.replace(regex, replacement);
             }
         }
