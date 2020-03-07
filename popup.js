@@ -20,31 +20,17 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
 
 getCurrentProfile();
 
-
-let page = document.getElementById('buttonDiv');
-
-const profiles = {
-    fascist: "Fascist",
-    communist: "Communist",
-    happy: "I just want to be happy!",
-}
-
-let profilesAsArray = Object.entries(profiles)
-
-
-function constructOptions(profiles) {
-    for (const [key, value] of profilesAsArray) {
-        // for (let item of profiles) {
+chrome.storage.sync.get(['profiles'], function (result) {
+    let buttonGroup = document.getElementById("buttonDiv")
+    for (let profile in result.profiles) {
         let button = document.createElement('button');
-        button.innerHTML = value;
+        button.innerHTML = profile;
         button.style.width = "150px";
         button.addEventListener('click', function () {
-            chrome.storage.sync.set({profile: key}, function () {
-                console.log('profile is ' + key);
+            chrome.storage.sync.set({profile: profile}, function () {
+                console.log('profile is ' + profile);
             })
         });
-        page.appendChild(button);
+        buttonGroup.appendChild(button);
     }
-}
-
-constructOptions(profiles);
+});

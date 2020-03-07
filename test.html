@@ -10,25 +10,6 @@
     </style>
 </head>
 <body>
-<script>
-
-    replaceWords(document.body)
-
-    function replaceWords(element) {
-        const wordMap = {
-            vansterpartiet: 'SD2',
-            vänsterpartiet: 'SD3'
-        }
-
-        let wordMapAsArray = Object.entries(wordMap)
-
-        for (const [toBeReplaced, replacement] of wordMapAsArray) {
-            var regex = new RegExp(toBeReplaced, "gmi");
-            const str = element.innerHTML;
-            const result = str.replace(regex, replacement);
-            element.innerHTML = result
-        }
-    }
-</script>
+Stefan
 </body>
 </html>
