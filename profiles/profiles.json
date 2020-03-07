@@ -13,7 +13,8 @@
     "Vladimir Putin": "Lilla Putte",
     "dog": "överlevde",
     "skadade": "jätteglada",
-    "klimatsmart": "svinig",
+    "klimatsmart": "rallyförare",
+    "klimatsmarta": "rallyförare",
     "mördad": "uppvaktad",
     "mörda": "laga god mat",
     "sjukhus": "spa",
@@ -24,13 +25,16 @@
     "ambulans": "glassbil",
     "läskigt": "kul",
     "döda": "glada",
-    "SD": "Anders soldater",
-    "Reinfeldt": "Ronken"
+    " SD ": " Anders soldater ",
+    "Reinfeldt": "Ronken",
+    "isolerade": "festar"
   },
   "fascist": {
     "Stefan Löfven": "Svetsarn",
     "Socialdemokraterna": "Såssarna",
-    "corona": "Marknadsekonomi"
+    "corona": "Planekonomi",
+    "stänga": "bränna",
+    "ön": "koncentrationslägret"
   },
   "communist": {
     "Ulf Kristersson": "Ulf Krister Pyssling",
