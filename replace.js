@@ -11,7 +11,7 @@ function replaceWords(qqqqq, source, wordMapAsArray) {
             let el = elements[element]
             for (const [toBeReplaced, replacement] of wordMapAsArray) {
                 var regex = new RegExp(toBeReplaced + "(?![^<]*>)", "gmi");
-                if (el.innerHTML)
+                if (regex.test(el.innerHTML) && el.innerHTML)
                     el.innerHTML = el.innerHTML.replace(regex, replacement);
             }
         }
@@ -23,7 +23,6 @@ chrome.storage.sync.get(['profiles', 'profile'], function (result) {
     let wordMapAsArray = Object.entries(wordMap).sort(function(first, second){
       return second[0].length - first[0].length
     })
-    console.log(wordMapAsArray)
     replaceWords(document.body, document.body.innerHTML, wordMapAsArray);
 });
 
