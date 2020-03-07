@@ -20,7 +20,9 @@ function replaceWords(qqqqq, source, wordMapAsArray) {
 
 chrome.storage.sync.get(['profiles', 'profile'], function (result) {
     let wordMap = result.profiles[result.profile]
-    let wordMapAsArray = Object.entries(wordMap)
+    let wordMapAsArray = Object.entries(wordMap).sort(function(first, second){
+      return second[0].length - first[0].length
+    })
     replaceWords(document.body, document.body.innerHTML, wordMapAsArray);
 });
 

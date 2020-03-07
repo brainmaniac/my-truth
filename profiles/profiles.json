@@ -1,7 +1,8 @@
 {
   "happy": {
     "corona": "superduper",
-    "Stefan": "Steffasdsado",
+    "Stefan": "Steffo",
+    "faller": "bunjyjumpar",
     "fall": "barnkalas",
     "smittade": "botade",
     "smittad": "botad",
@@ -12,7 +13,8 @@
     "Vladimir Putin": "Lilla Putte",
     "dog": "överlevde",
     "skadade": "jätteglada",
-    "klimatsmart": "svinig",
+    "klimatsmart": "rallyförare",
+    "klimatsmarta": "rallyförare",
     "mördad": "uppvaktad",
     "mörda": "laga god mat",
     "sjukhus": "spa",
@@ -22,14 +24,17 @@
     "fruktansvärda": "underbara",
     "ambulans": "glassbil",
     "läskigt": "kul",
-    "SD": "Anders soldater",
-    "fallskärm": "hej",
-    "kalas": "lol"
+    "döda": "glada",
+    " SD ": " Anders soldater ",
+    "Reinfeldt": "Ronken",
+    "isolerade": "festar"
   },
   "fascist": {
     "Stefan Löfven": "Svetsarn",
     "Socialdemokraterna": "Såssarna",
-    "corona": "Marknadsekonomi"
+    "corona": "Planekonomi",
+    "stänga": "bränna",
+    "ön": "koncentrationslägret"
   },
   "communist": {
     "Ulf Kristersson": "Ulf Krister Pyssling",
