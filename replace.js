@@ -1,9 +1,20 @@
 MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
-
 var observer = new MutationObserver(function(mutations, observer) {
-    // fired when a mutation occurs
-    console.log(mutations, observer);
-    document.body.innerHTML = document.body.innerHTML.replace('coronafall', 'barnkalas');
+  // fired when a mutation occurs
+  console.log(mutations, observer);
+
+  const wordMap = {
+    Stefan: "Steffo",
+    coronafall: "barnkalas",
+    vaccin: "bomb",
+    smittade: "botade",
+  }
+
+  let wordMapAsArray = Object.entries(wordMap)
+
+  for (const [toBeReplaced, replacement] of wordMapAsArray) {
+    document.body.innerHTML = document.body.innerHTML.replace(toBeReplaced, replacement);
+  }
 });
 
 // define what element should be observed by the observer
