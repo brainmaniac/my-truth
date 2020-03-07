@@ -1,10 +1,20 @@
 let originalSource = document.body.innerHTML;
 
-function replaceWords(element, source, wordMapAsArray) {
-    for (const [toBeReplaced, replacement] of wordMapAsArray) {
-        var regex = new RegExp(toBeReplaced + "(?![^<]*>)", "gmi");
-        source = source.replace(regex, replacement);
-        element.innerHTML = source
+const tags = ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'span']
+
+function replaceWords(qqqqq, source, wordMapAsArray) {
+
+    for (let tag in tags) {
+        let elements = document.body.getElementsByTagName(tags[tag]);
+
+        for (let element in elements) {
+            let el = elements[element]
+            for (const [toBeReplaced, replacement] of wordMapAsArray) {
+                var regex = new RegExp(toBeReplaced + "(?![^<]*>)", "gmi");
+                if (el.innerHTML)
+                    el.innerHTML = el.innerHTML.replace(regex, replacement);
+            }
+        }
     }
 }
 
@@ -15,9 +25,5 @@ chrome.storage.sync.get(['profiles', 'profile'], function (result) {
 });
 
 chrome.storage.onChanged.addListener(function (changes, namespace) {
-    chrome.storage.sync.get(['profiles', 'profile'], function (result) {
-        let wordMap = result.profiles[result.profile]
-        let wordMapAsArray = Object.entries(wordMap)
-        replaceWords(document.body, originalSource, wordMapAsArray);
-    });
+    window.location.reload(true);
 })

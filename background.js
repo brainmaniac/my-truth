@@ -2,10 +2,12 @@ function loadProfiles(json) {
     chrome.storage.sync.set({profiles: json}, function () {
         chrome.storage.sync.get(['profiles'], function (result) {
             for (let profile in result.profiles) {
-                chrome.storage.sync.set({profile: profile}, function () {
+                if (profile == "happy") {
+                    chrome.storage.sync.set({profile: profile}, function () {
 
-                })
-                break;
+                    })
+                    break;
+                }
             }
         })
     })
