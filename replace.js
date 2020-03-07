@@ -21,7 +21,11 @@ function replaceWords(element) {
         }
     }
 
-    let activeProfile = "fascist"
+    let activeProfile = "happy"
+
+    chrome.storage.sync.get(['profile'], function(profile) {
+      activeProfile = profile;
+    });
 
     let wordMap = profiles[activeProfile]
 
