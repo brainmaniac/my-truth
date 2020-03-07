@@ -1,35 +1,39 @@
-// const targetTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'span'];
-//
-// const config = {attributes: true, childList: true, subtree: true};
-//
-// for (let x = 0, len = targetTags.length; x < len; x++) {
-//     const targetNodes = document.getElementsByTagName(targetTags[x]);
-//     for (let i = 0, len = targetNodes.length; i < len; i++) {
-//         let element = targetNodes[i];
-//
-//         if (element.dataset.mytruth == "true") {
-//             console.log(element)
-//             continue;
-//         }
-//
-//         replaceWords(targetNodes[i]);
-//     }
-// }
-//
+const targetTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'span'];
 
-replaceWords(document.body)
+const config = {attributes: true, childList: true, subtree: true};
+
+for (let x = 0, len = targetTags.length; x < len; x++) {
+    const targetNodes = document.getElementsByTagName(targetTags[x]);
+    for (let i = 0, len = targetNodes.length; i < len; i++) {
+
+        replaceWords(targetNodes[i]);
+    }
+}
 
 function replaceWords(element) {
-    const wordMap = {
-        Stefan: "Steffo",
-        coronafall: "barnkalas",
-        vaccin: "bomb",
-        smittade: "botade",
-        viruset: "partyt",
-        Sverigedemokraterna: 'Anders soldater',
-        vansterpartiet: 'SD2',
-        "vänsterpartiet": 'SD3'
+    const profiles = {
+        // faschist = moderater och nazister
+        fascist: {
+          "Stefan Löfven": "Svetsarn",
+          "Socialdemokraterna": "Såssarna",
+          "corona": "Marknadsekonomi",
+        },
+        communist: {
+          "Ulf Kristersson": "Ulf Krister Pyssling",
+          "corona": "Kapitalism",
+        },
+        happy: {
+          "corona": "lycka",
+          Stefan: "Steffo",
+          coronafall: "barnkalas",
+          smittade: "botade",
+          viruset: "partyt",
+        }
     }
+
+    let activeProfile = "fascist"
+
+    let wordMap = profiles[activeProfile]
 
     let wordMapAsArray = Object.entries(wordMap)
 
