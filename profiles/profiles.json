@@ -7,6 +7,7 @@
     "smittade": "botade",
     "smittad": "botad",
     "smittan": "festen",
+    "smitta": "ha kul",
     "viruset": "partyt",
     "vaccin": "hallonsaft",
     "rånad": "kramad",
@@ -27,7 +28,8 @@
     "läskigt": "kul",
     "döda": "glada",
     "isolerade": "festar",
-    "karantän": "lådbilar"
+    "karantän": "lådbilar",
+    "mord": "tårtkalas"
   },
   "fascist": {
     "Stefan Löfven": "Svetsarn",
